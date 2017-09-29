@@ -68,7 +68,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mN-4y-XtZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114" y="1354"/>
+            <point key="canvasLocation" x="1073" y="1976"/>
+        </scene>
+        <!--Game Settings View Controller-->
+        <scene sceneID="WFk-en-OmZ">
+            <objects>
+                <viewController id="G79-of-OLb" customClass="GameSettingsViewController" customModule="CoreDataLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RPz-i6-lpP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wou-cB-wnb">
+                                <rect key="frame" x="118" y="269" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Game"/>
+                                <connections>
+                                    <segue destination="dS0-6r-yRH" kind="show" id="PJX-WZ-CX9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Options" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l6-hK-iYb">
+                                <rect key="frame" x="93" y="92" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-hn-NkG">
+                                <rect key="frame" x="44" y="173" width="232" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Red" enabled="NO"/>
+                                    <segment title="Yellow" enabled="NO"/>
+                                    <segment title="Green" enabled="NO"/>
+                                </segments>
+                                <connections>
+                                    <action selector="colorChanged:" destination="G79-of-OLb" eventType="valueChanged" id="nGg-b6-hS0"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="n9X-Mx-hEM"/>
+                    </view>
+                    <connections>
+                        <outlet property="segControl" destination="vGd-hn-NkG" id="xdM-Fd-hiQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UV9-9B-Qrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1072.5" y="1252.8169014084508"/>
         </scene>
         <!--Stats View Controller-->
         <scene sceneID="3TO-pN-6ss">
@@ -143,7 +190,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Game Time"/>
                                 <connections>
-                                    <segue destination="dS0-6r-yRH" kind="show" id="w0o-a2-nLn"/>
+                                    <segue destination="G79-of-OLb" kind="show" id="7oP-lR-vbw"/>
                                 </connections>
                             </button>
                         </subviews>

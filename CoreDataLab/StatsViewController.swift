@@ -91,9 +91,7 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
     
     
     func startActivityMonitoring(){
-        // is activity is available
         if CMMotionActivityManager.isActivityAvailable(){
-            // update from this queue (should we use the MAIN queue here??.... )
             self.activityManager.startActivityUpdates(to: OperationQueue.main)
             {(activity:CMMotionActivity?)->Void in
                 // unwrap the activity and dispaly
@@ -151,13 +149,4 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
             })
         }
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
-        let compSepByCharInSet = string.components(separatedBy: aSet)
-        let numberFiltered = compSepByCharInSet.joined(separator: "")
-        return string == numberFiltered
-    }
-
 }

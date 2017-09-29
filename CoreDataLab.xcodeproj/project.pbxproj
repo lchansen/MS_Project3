@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		559680C41F7EE5C400665D13 /* GameSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559680C31F7EE5C400665D13 /* GameSettingsViewController.swift */; };
 		A37BA5C91F7CCB6E00C8CF1C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BA5C81F7CCB6E00C8CF1C /* GameViewController.swift */; };
 		A37BA5CB1F7CCBA300C8CF1C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BA5CA1F7CCBA300C8CF1C /* GameScene.swift */; };
 		A3D187051F7C99A300FEAE7C /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D187041F7C99A300FEAE7C /* StatsViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		559680C31F7EE5C400665D13 /* GameSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSettingsViewController.swift; sourceTree = "<group>"; };
 		A37BA5C81F7CCB6E00C8CF1C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A37BA5CA1F7CCBA300C8CF1C /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A3D187041F7C99A300FEAE7C /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				A3EC3C2D1F7C945400345C54 /* AppDelegate.swift */,
 				A3EC3C2F1F7C945400345C54 /* ViewController.swift */,
 				A3EC3C311F7C945400345C54 /* Main.storyboard */,
+				559680C31F7EE5C400665D13 /* GameSettingsViewController.swift */,
 				A3D187041F7C99A300FEAE7C /* StatsViewController.swift */,
 				A3EC3C341F7C945400345C54 /* Assets.xcassets */,
 				A3EC3C361F7C945400345C54 /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 			files = (
 				A37BA5CB1F7CCBA300C8CF1C /* GameScene.swift in Sources */,
 				A37BA5C91F7CCB6E00C8CF1C /* GameViewController.swift in Sources */,
+				559680C41F7EE5C400665D13 /* GameSettingsViewController.swift in Sources */,
 				A3EC3C301F7C945400345C54 /* ViewController.swift in Sources */,
 				A3D187051F7C99A300FEAE7C /* StatsViewController.swift in Sources */,
 				A3EC3C2E1F7C945400345C54 /* AppDelegate.swift in Sources */,
@@ -439,7 +443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F69WJ27LN4;
+				DEVELOPMENT_TEAM = N2FF4799SW;
 				INFOPLIST_FILE = CoreDataLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.smu.lyle.cse5323.lhansen.CoreDataLab;
@@ -454,7 +458,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F69WJ27LN4;
+				DEVELOPMENT_TEAM = N2FF4799SW;
 				INFOPLIST_FILE = CoreDataLab/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.smu.lyle.cse5323.lhansen.CoreDataLab;

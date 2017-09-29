@@ -1,3 +1,11 @@
+//
+//  GameViewController.swift
+//  CoreDataLab
+//
+//  Created by Luke Hansen on 9/27/17.
+//  Copyright © 2017 Luke Hansen. All rights reserved.
+//
+
 import UIKit
 import SpriteKit
 
@@ -6,10 +14,9 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //setup game scene
+
         let scene = GameScene(size: view.bounds.size)
-        let skView = view as! SKView // the view in storyboard must be an SKView
+        let skView = view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
         skView.ignoresSiblingOrder = true
@@ -19,7 +26,6 @@ class GameViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override var prefersStatusBarHidden : Bool {
