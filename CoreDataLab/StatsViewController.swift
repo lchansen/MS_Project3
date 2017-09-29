@@ -16,8 +16,8 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
     var goalMet = true
     let defaults = UserDefaults.standard
     
-    
     @IBOutlet var currStepsSinceYesterday: UILabel!
+    @IBOutlet var GameButton: UIButton!
     @IBOutlet var currSteps: UILabel!
     @IBOutlet var activityLabel: UILabel!
     @IBOutlet var goalTextField: UITextField!
@@ -25,6 +25,7 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.GameButton.isEnabled = false;
         self.startActivityMonitoring()
         self.startPedometerMonitoring()
         self.goalTextField.delegate = self
@@ -42,18 +43,24 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
                 if let ci = currTextfieldInt{
                     if(gi-ci>0){
                         self.progressLabel.text = String(gi-ci)
+                        self.GameButton.isEnabled = false;
                     }
                     else {
                         self.progressLabel.text = "Goal Met"
+                        self.GameButton.isEnabled = true;
                     }
                 } else {
                     self.progressLabel.text = "No Goal"
+                    self.GameButton.isEnabled = false;
                 }
             } else {
                 self.progressLabel.text = "No Goal"
+                self.GameButton.isEnabled = false;
+                
             }
         } else {
             self.progressLabel.text = "No Goal"
+            self.GameButton.isEnabled = false;
         }
     }
 
@@ -62,6 +69,7 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
         defaults.set(self.goalTextField.text, forKey:"PersistentGoal")
         self.updateGoalStatus()
+        
         super.touchesBegan(touches, with: event)
     }
 
@@ -120,6 +128,7 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
                     print("\(pedData!.description)")
                     DispatchQueue.main.async() {
                         self.currStepsSinceYesterday.text = (pedData?.numberOfSteps.stringValue)!
+                        self.defaults.set(self.currStepsSinceYesterday.text, forKey:"StepsSinceYesterday")
                         self.currStepsSinceYesterday.setNeedsDisplay()
                         self.updateGoalStatus()
                         self.goalTextField.setNeedsDisplay()
@@ -133,6 +142,7 @@ class StatsViewController: UIViewController, UITextFieldDelegate {
                     print("\(pedData!.description)")
                     DispatchQueue.main.async() {
                         self.currSteps.text = (pedData?.numberOfSteps.stringValue)!
+                        self.defaults.set(self.currSteps.text, forKey:"CurrSteps")
                         self.currSteps.setNeedsDisplay()
                         self.updateGoalStatus()
                         self.goalTextField.setNeedsDisplay()
